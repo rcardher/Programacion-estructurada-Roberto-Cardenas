@@ -22,4 +22,11 @@ void verEstudiantes(Nodo* cabeza);
 void eliminarEstudiante(Nodo** cabeza, const char* nombre);
 void liberarLista(Nodo** cabeza);
 
+// Definición de una unión que puede almacenar diferentes tipos de datos
+typedef union {
+    int entero;
+    float flotante;
+    char cadena[50];
+} TipoDato;
+
 #endif
