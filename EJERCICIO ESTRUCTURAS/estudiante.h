@@ -7,7 +7,7 @@ typedef struct {
     char nombre[50];
     int edad;
     float promedio;
-} Estudiante;
+} Estudiante;  // Alias para la estructura Estudiante
 
 // Nodo de la lista enlazada
 typedef struct Nodo {
@@ -33,3 +33,4 @@ typedef union {
 Estudiante copiarEstudiante(Estudiante original);
 
 #endif
+

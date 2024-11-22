@@ -13,7 +13,7 @@ int main() {
     verEstudiantes(lista);
 
     // Eliminar un estudiante
-    printf("\nEliminando 'Maria Lopez':\n");
+    printf("\nEliminando 'Miguel Godoy':\n");
     eliminarEstudiante(&lista, "Miguel Godoy");
 
     // Ver la lista de estudiantes después de eliminar
@@ -39,6 +39,7 @@ int main() {
 
     return 0;
 }
+
 
 
 
