@@ -76,3 +76,16 @@ void liberarLista(Nodo** cabeza) {
     *cabeza = NULL;
 }
 
+// Función para copiar un estudiante
+Estudiante copiarEstudiante(Estudiante original) {
+    Estudiante copia;
+    // Copiar los valores del estudiante original a la copia
+    strncpy(copia.nombre, original.nombre, sizeof(copia.nombre) - 1);
+    copia.nombre[sizeof(copia.nombre) - 1] = '\0';  // Asegurar que la cadena se termine en null
+    copia.edad = original.edad;
+    copia.promedio = original.promedio;
+
+    return copia;
+}
+
+

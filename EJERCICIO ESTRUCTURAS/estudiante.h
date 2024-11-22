@@ -29,4 +29,7 @@ typedef union {
     char cadena[50];
 } TipoDato;
 
+// Prototipo para la nueva función
+Estudiante copiarEstudiante(Estudiante original);
+
 #endif

@@ -13,7 +13,7 @@ int main() {
     verEstudiantes(lista);
 
     // Eliminar un estudiante
-    printf("\nEliminando 'Miguel Godoy':\n");
+    printf("\nEliminando 'Maria Lopez':\n");
     eliminarEstudiante(&lista, "Miguel Godoy");
 
     // Ver la lista de estudiantes después de eliminar
@@ -24,26 +24,21 @@ int main() {
     liberarLista(&lista);
     printf("\nLista liberada.\n");
 
-    // Crear y utilizar una unión para almacenar diferentes tipos de datos
-    TipoDato valor;
+    // Crear un estudiante para copiar
+    Estudiante estudianteOriginal = {"Jesús Gomez", 21, 8.9};
 
-    // Asignar un valor entero a la unión
-    valor.entero = 42;
-    printf("\nValor almacenado en la unión (entero): %d\n", valor.entero);
+    // Copiar el estudiante
+    Estudiante estudianteCopia = copiarEstudiante(estudianteOriginal);
 
-    // Asignar un valor flotante a la unión
-    valor.flotante = 3.14;
-    printf("Valor almacenado en la unión (flotante): %.2f\n", valor.flotante);
+    // Imprimir los datos del estudiante original y la copia
+    printf("\nEstudiante Original:\n");
+    printf("Nombre: %s, Edad: %d, Promedio: %.2f\n", estudianteOriginal.nombre, estudianteOriginal.edad, estudianteOriginal.promedio);
 
-    // Asignar una cadena de caracteres a la unión
-    snprintf(valor.cadena, sizeof(valor.cadena), "Hola Mundo");
-    printf("Valor almacenado en la unión (cadena): %s\n", valor.cadena);
-
-    // Nota: Almacenando diferentes valores en la unión
-    // Solo uno de los valores puede estar en la unión al mismo tiempo.
-    // Si accedemos al valor después de asignar uno nuevo, sobrescribirá el anterior.
+    printf("\nEstudiante Copia:\n");
+    printf("Nombre: %s, Edad: %d, Promedio: %.2f\n", estudianteCopia.nombre, estudianteCopia.edad, estudianteCopia.promedio);
 
     return 0;
 }
+
 
 
