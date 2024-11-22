@@ -2,43 +2,43 @@
 #include "main.h"
 
 int main() {
-    // Lista de estudiantes
-    Nodo* lista = NULL; // Inicializar la lista vacía
+    // Creamos una lista vacía de estudiantes
+    Nodo* lista = NULL;
+
+    // Agregamos estudiantes a la lista
     agregarEstudiante(&lista, "Roberto Cárdenas", 18, 7.5);
-    agregarEstudiante(&lista, "Miguel Godoy", 18, 6);
+    agregarEstudiante(&lista, "Miguel Godoy", 22, 6);
     agregarEstudiante(&lista, "Pablo Moreno", 25, 3.5);
 
-    // Ver la lista de estudiantes
+    // Mostramos los estudiantes en la lista
     printf("Lista de estudiantes:\n");
     verEstudiantes(lista);
 
-    // Eliminar un estudiante
+    // Eliminamos un estudiante
     printf("\nEliminando 'Miguel Godoy':\n");
     eliminarEstudiante(&lista, "Miguel Godoy");
 
-    // Ver la lista de estudiantes después de eliminar
+    // Mostramos la lista tras eliminar un estudiante
     printf("\nLista de estudiantes después de eliminar:\n");
     verEstudiantes(lista);
 
-    // Liberar toda la lista
+    // Liberamos toda la memoria de la lista
     liberarLista(&lista);
     printf("\nLista liberada.\n");
 
-    // Crear un estudiante para copiar
+    // Creamos un estudiante y pasamos su dirección a la función
     Estudiante estudianteOriginal = {"Jesús Gomez", 21, 8.9};
 
-    // Copiar el estudiante
-    Estudiante estudianteCopia = copiarEstudiante(estudianteOriginal);
-
-    // Imprimir los datos del estudiante original y la copia
-    printf("\nEstudiante Original:\n");
-    printf("Nombre: %s, Edad: %d, Promedio: %.2f\n", estudianteOriginal.nombre, estudianteOriginal.edad, estudianteOriginal.promedio);
-
-    printf("\nEstudiante Copia:\n");
-    printf("Nombre: %s, Edad: %d, Promedio: %.2f\n", estudianteCopia.nombre, estudianteCopia.edad, estudianteCopia.promedio);
+    // Llamamos a la función para imprimir el estudiante por dirección
+    printf("\nImprimir Estudiante por Dirección:\n");
+    imprimirEstudiantePorDireccion(&estudianteOriginal);
 
     return 0;
 }
+
+
+
+
 
 
 
